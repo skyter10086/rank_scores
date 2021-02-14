@@ -41,7 +41,7 @@ def get_point(x):
 def rank(csv_file, classes_counts, field):
     df = pd.read_csv(csv_file)
      
-    df['rank'] = df[field].rank(method='min', ascending=False)
+    df['rank'] = df[field].rank(method='max', ascending=False)
     #df['rank_chinese'] = df['score_chinese'].rank(method='min', ascending=False)
     #df['rank_english'] = df['score_english'].rank(method='min', ascending=False)
     #df['rank_chemistry'] = df['score_chemistry'].rank(method='min', ascending=False)
